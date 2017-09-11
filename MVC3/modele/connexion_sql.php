@@ -1,9 +1,9 @@
 <?php
 
-// Connexion à la base de données
+// Connexion ï¿½ la base de donnï¿½es
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=sta15;charset=utf8', 'sta15', 'YnFuJv2AA6ai58hd');
+	$bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');
 }
 catch(Exception $e)
 {
