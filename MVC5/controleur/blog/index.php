@@ -47,7 +47,8 @@ $function ($view);
 function posts ($view) {
 
 	// On demande les 5 derniers billets (modèle)
-	$billets = get_billets(0, 5);
+	$model = new postModel();
+	$billets = $model->get_billets(0, 5);
 
 	// On effectue du traitement sur les données (contrôleur)
 	// Ici, on doit surtout sécuriser l'affichage
@@ -81,7 +82,8 @@ function commentaires ($view) {
 		}
 
 		//on affiche les commentaires d'un billet
-		$datas_billet = get_billet($billet);
+		$model = new commentairesModel();
+		$datas_billet = $model->get_billet($billet);
 
 		$title = "Commentaires du post donr l'id est : " . $billet;
 
